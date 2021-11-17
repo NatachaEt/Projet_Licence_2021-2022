@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class NetworkParserTest {
 
     /** Chemin vers les fichiers de test */
-    final String path = "./target/classes/data/";
+    final String path = "./target/classes/Data/";
 
     /** Instance singleton du parser de stations */
     final NetworkParser parser = NetworkParser.getInstance();
