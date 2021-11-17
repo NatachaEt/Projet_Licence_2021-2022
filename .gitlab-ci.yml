@@ -11,10 +11,12 @@ variables:
 build:
   stage: build
   script:
+    - cd Transport/ 
     - mvn $MAVEN_CLI_OPTS compile
 
 test:
   stage: test
   script:
+    - cd Transport/ 
     - mvn $MAVEN_CLI_OPTS test
     - cat target/site/jacoco/index.html
