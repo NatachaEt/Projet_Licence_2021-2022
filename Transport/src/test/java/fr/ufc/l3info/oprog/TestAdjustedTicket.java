@@ -10,8 +10,8 @@ public class TestAdjustedTicket {
     ITicket a;
     @Before
     public void decl(){
-        e = new BaseTicket01(true,10);
-        a = new BaseTicket01(false,22);
+        e = new BaseTicket(true,10);
+        a = new BaseTicket(false,22);
     }
 
     @Test
@@ -24,12 +24,12 @@ public class TestAdjustedTicket {
     }
     @Test
     public void IncorrectConsChild(){
-        ITicket ef = new BaseTicket01(true,-20);
+        ITicket ef = new BaseTicket(true,-20);
         Assert.assertTrue(e.isChild());
     }
     @Test
     public void IncorrectConsAdult(){
-        ITicket af = new BaseTicket01(false,-2);
+        ITicket af = new BaseTicket(false,-2);
         Assert.assertFalse(a.isChild());
 
     }
@@ -39,7 +39,7 @@ public class TestAdjustedTicket {
     }
     @Test
     public void CorrectAdultAmount(){
-        ITicket a2 = new BaseTicket01(false,1032);
+        ITicket a2 = new BaseTicket(false,1032);
         Assert.assertEquals(a2.getAmount(),1032);
     }
     @Test
@@ -48,7 +48,7 @@ public class TestAdjustedTicket {
          * Le montant du ticket est censé etre nul(egal a 0, un int ne peut etre null en java)
          * car le montant passé au constructeur est negatif
          */
-        ITicket e2 = new BaseTicket01(true,-20);
+        ITicket e2 = new BaseTicket(true,-20);
         Assert.assertEquals(0,e2.getAmount());
 
     }
@@ -58,7 +58,7 @@ public class TestAdjustedTicket {
          * Le montant du ticket est censé etre nul(egal a 0, un int ne peut etre null en java)
          * car le montant passé au constructeur est negatif
          */
-        ITicket a2 = new BaseTicket01(false,-2);
+        ITicket a2 = new BaseTicket(false,-2);
         Assert.assertEquals(0,a2.getAmount());
     }
 

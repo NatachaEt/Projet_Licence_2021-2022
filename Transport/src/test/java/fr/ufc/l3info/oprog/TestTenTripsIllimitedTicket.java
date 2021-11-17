@@ -9,8 +9,8 @@ public class TestTenTripsIllimitedTicket {
     ITicket ticket10adult;
     @Before
     public void decl(){
-        ticket10child = TenIllimitedTripsTicket(true);
-        ticket10adult = TenTripsIllimitedTicket(false);
+        ticket10child = new TenIllimitedTripsTicket(true);
+        ticket10adult = new TenIllimitedTripsTicket (false);
     }
 
     @Test
