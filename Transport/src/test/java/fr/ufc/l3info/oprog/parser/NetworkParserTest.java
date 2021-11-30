@@ -185,6 +185,66 @@ public class NetworkParserTest {
         parser.parse(new File(path + "metroDoubleLigneStatement.txt"));
     }
 
+    @Test(expected = NetworkParserException.class)
+    public void testParserEmptyDeclaration() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroEmptyDeclaration.txt"));
+    }
+
+    @Test(expected = NetworkParserException.class)
+    public void testParserDeclarationNotNumber() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroDeclarationNotNumber.txt"));
+    }
+
+    @Test
+    public void testParserEmptyLineName() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroEmptyLineName.txt"));
+    }
+
+    @Test
+    public void testParserEmptyLineNameSpace() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroEmptyLineNameSpace.txt"));
+    }
+
+    @Test
+    public void testParserEmptyStationName() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroEmptyStationName.txt"));
+    }
+
+    @Test
+    public void testParserEmptyStationNameSpace() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroEmptyStationNameSpace.txt"));
+    }
+
+    @Test
+    public void testParserNegativeNumberDeclaration() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroWrongNumberValueNeg.txt"));
+    }
+
+    @Test
+    public void testParserNotNumberCroissantDeclaration() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroWrongNumberValueCroissant.txt"));
+    }
+
+    @Test
+    public void testParserUnreachable() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroUnreachableLine.txt"));
+    }
+
+    @Test
+    public void testParser1Line() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metro1Line.txt"));
+    }
+
+    @Test(expected = NetworkParserException.class)
+    public void testParserNoSpace() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroDoubleLigneStatement.txt"));
+    }
+
+    @Test(expected = NetworkParserException.class)
+    public void testParserTokenNumberFalse() throws IOException, NetworkParserException {
+        parser.parse(new File(path + "metroTokenNumberFalse.txt"));
+    }
+
 
 
 }
