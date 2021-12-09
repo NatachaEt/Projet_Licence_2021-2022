@@ -50,34 +50,6 @@ public class TestTenTripsIllimitedTicket {
 
     @Test public void testEnteringChild(){ Assert.assertTrue(ticket10child.entering("Station1"));}
 
-    @Test public void testEnteringAdult10Travel(){
-        Assert.assertTrue(ticket10adult.entering("Station1"));
-        Assert.assertTrue(ticket10adult.entering("Station2"));
-        Assert.assertTrue(ticket10adult.entering("Station3"));
-        Assert.assertTrue(ticket10adult.entering("Station4"));
-        Assert.assertTrue(ticket10adult.entering("Station5"));
-        Assert.assertTrue(ticket10adult.entering("Station6"));
-        Assert.assertTrue(ticket10adult.entering("Station7"));
-        Assert.assertTrue(ticket10adult.entering("Station8"));
-        Assert.assertTrue(ticket10adult.entering("Station9"));
-        Assert.assertTrue(ticket10adult.entering("Station10"));
-        Assert.assertFalse(ticket10adult.entering("Station11"));
-    }
-
-    @Test public void testEnteringChild10Travel(){
-        Assert.assertTrue(ticket10child.entering("Station1"));
-        Assert.assertTrue(ticket10child.entering("Station2"));
-        Assert.assertTrue(ticket10child.entering("Station3"));
-        Assert.assertTrue(ticket10child.entering("Station4"));
-        Assert.assertTrue(ticket10child.entering("Station5"));
-        Assert.assertTrue(ticket10child.entering("Station6"));
-        Assert.assertTrue(ticket10child.entering("Station7"));
-        Assert.assertTrue(ticket10child.entering("Station8"));
-        Assert.assertTrue(ticket10child.entering("Station9"));
-        Assert.assertTrue(ticket10child.entering("Station10"));
-        Assert.assertFalse(ticket10child.entering("Station11"));
-    }
-
     @Test
     public void testEnteringInvalidateTicketAdult(){
         ticket10adult.invalidate();

@@ -10,13 +10,13 @@ public class TicketMachine {
         return INSTANCE;
     }
 
-    ITicket buyTicket(boolean child, int... amount){
+    public ITicket buyTicket(boolean child, int... amount){
         if(amount.length == 0) return new TenIllimitedTripsTicket(child);
         if(amount[0] > 0) return new BaseTicket(child, amount[0]);
         return  null;
     }
 
-    ITicket adjustFare(ITicket old, int amount){
+    public ITicket adjustFare(ITicket old, int amount){
         if(old == null) return null;
         if (old instanceof TenIllimitedTripsTicket) return old;
         if(amount <= 0) return old;

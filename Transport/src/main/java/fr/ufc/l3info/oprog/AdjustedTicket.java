@@ -33,8 +33,7 @@ public class AdjustedTicket  implements ITicket {
     }
 
     @Override
-    public void invalidate() {
-    }
+    public void invalidate() { initial.invalidate();}
 
     @Override
     public int getAmount() {

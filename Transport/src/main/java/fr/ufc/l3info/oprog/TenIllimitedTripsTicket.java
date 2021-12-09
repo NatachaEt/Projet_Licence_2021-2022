@@ -28,12 +28,12 @@ public class TenIllimitedTripsTicket implements ITicket {
 
     @Override
     public boolean entering(String name) {
-        if (this.state == ISSUED && name != null && !name.trim().equals("") && this.voyage > 1) {
+        if (this.state == ISSUED && name != null && !name.trim().equals("") && this.voyage >= 1) {
             entry = name;
             this.state = ENTERED;
             return true;
         }
-        if (this.state == ENTERED && name != null && !name.trim().equals("") && this.voyage > 1) {
+        if (this.state == ENTERED && name != null && !name.trim().equals("") && this.voyage >= 1) {
             entry = name;
             this.state = ENTERED;
             this.voyage--;
